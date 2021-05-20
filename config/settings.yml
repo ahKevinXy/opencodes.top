@@ -1,0 +1,25 @@
+
+application:
+  host: 0.0.0.0
+  mode: dev
+  port: "8001"
+  version: 1.0.2
+  writertimeout: 2
+  readTimeout: 1
+database:
+  dbtype: mysql
+  host: 192.168.6.107
+  name: opencodes.top
+  password:
+  port: 3306
+  username: root
+log:
+  dir: ./log
+  level: debug
+  format: json
+  log-in-console: false
+redis:
+  addr: 192.168.6.107:6381
+  db: 0
+  password: ""
+

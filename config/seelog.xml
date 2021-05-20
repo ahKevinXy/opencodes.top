@@ -1,0 +1,26 @@
+<seelog minlevel="trace" maxlevel="critical" type="asyncloop" >
+    <outputs formatid="main">
+        <filter levels="info">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/info/info.log" datepattern="2006.01.02" maxrolls="2000" />
+        </filter>
+        <filter levels="error">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/error/error.log" datepattern="2006.01.02.15" maxrolls="1000" />
+        </filter>
+        <filter levels="debug">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/debug/debug.log" datepattern="2006.01.02" maxrolls="1000" />
+        </filter>
+        <filter levels="warn">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/warn/warn.log" datepattern="2006.01.02" maxrolls="1000" />
+        </filter>
+        <filter levels="trace">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/trace/trace.log" datepattern="2006.01.02" maxrolls="1000" />
+        </filter>
+        <filter levels="critical">
+            <rollingfile type="date" namemode ="prefix" filename="./logs/critical/critical.log" datepattern="2006.01.02.15" maxrolls="1000" />
+        </filter>
+    </outputs>
+
+    <formats>
+        <format id="main" format="%Date/%Time %Msg%n"/>
+    </formats>
+</seelog>

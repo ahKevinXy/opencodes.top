@@ -64,7 +64,7 @@ func Setup(path string) {
 	//初始化上传配置
 	cfgUpload = viper.Sub("upload")
 	if cfgUpload == nil {
-		panic("config not found redis")
+		panic("config not found upload")
 	}
 	UploadConfig = InitUpload(cfgUpload)
 

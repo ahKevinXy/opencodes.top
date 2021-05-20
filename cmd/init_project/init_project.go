@@ -1,4 +1,4 @@
-package api
+package cron
 
 import (
 	"opencodes/init_server"
@@ -12,8 +12,8 @@ var (
 	port     string
 	mode     string
 	StartCmd = &cobra.Command{
-		Use:     "api",
-		Short:   "Start API server",
+		Use:     "init",
+		Short:   "init project",
 		Example: "jobsServer config/settings.yml",
 		PreRun: func(cmd *cobra.Command, args []string) {
 			usage()
@@ -39,7 +39,11 @@ func usage() {
 func setup() {
 	//1. 读取配置
 	config2.Setup(config)
-	init_server.StartAllSever()
+
+	// 初始化数据
+	init_server.DbSever()
+
+	//执行项目的初始化数据库
 }
 
 func run() error {

@@ -1,4 +1,4 @@
-package api
+package app
 
 import (
 	"opencodes/init_server"
@@ -12,7 +12,7 @@ var (
 	port     string
 	mode     string
 	StartCmd = &cobra.Command{
-		Use:     "api",
+		Use:     "app",
 		Short:   "Start API server",
 		Example: "jobsServer config/settings.yml",
 		PreRun: func(cmd *cobra.Command, args []string) {

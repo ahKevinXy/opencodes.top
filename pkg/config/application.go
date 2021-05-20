@@ -9,6 +9,7 @@ type Application struct {
 	Port          string
 	Mode          string
 	AppVersion    string
+	IsSync        int
 }
 
 func InitApplication(cfg *viper.Viper) *Application {
@@ -19,6 +20,7 @@ func InitApplication(cfg *viper.Viper) *Application {
 		Port:          portDefault(cfg),
 		Mode:          cfg.GetString("mode"),
 		AppVersion:    cfg.GetString("version"),
+		IsSync:        cfg.GetInt("is-sync"),
 	}
 }
 

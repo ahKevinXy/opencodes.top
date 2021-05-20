@@ -16,7 +16,11 @@ func StartAllSever() {
 	DbSever()
 	RedisServer()
 	worker.WorkSetUp()
-	CronService()
+	// 判断是否启动定时器任务
+	if config.ApplicationConfig.IsSync == 1 {
+		CronService()
+	}
+
 	WebServer()
 
 }

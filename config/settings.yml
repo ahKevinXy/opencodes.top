@@ -1,25 +1,35 @@
 
+### 应用配置
 application:
   host: 0.0.0.0
   mode: dev
   port: "8001"
   version: 1.0.2
+  is-sync: 0
   writertimeout: 2
   readTimeout: 1
+### 数据库配置
 database:
   dbtype: mysql
-  host: 192.168.6.107
+  host: 192.168.1.1
   name: opencodes.top
   password:
   port: 3306
   username: root
+## 日志配置
 log:
-  dir: ./log
+  dir: log
   level: debug
   format: json
   log-in-console: false
+
+## redis 配置
 redis:
-  addr: 192.168.6.107:6381
+  addr: 192.168.1.1:6381
   db: 0
   password: ""
+
+## 上传配置
+upload:
+  dir: upload
 

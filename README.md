@@ -29,3 +29,9 @@ air -c .air.toml
 
 
 
+
+```
+# 启动命令
+
+opencodes api -c config/settings.dev -p 8000 -m dev 
+```

@@ -18,7 +18,7 @@ database:
   username: root
 ## 日志配置
 log:
-  dir: log
+  dir: config/seelog.xml
   level: debug
   format: json
   log-in-console: false
@@ -33,3 +33,7 @@ redis:
 upload:
   dir: upload
 
+## jwt 配置
+jwt:
+ secret: opencodes
+ timeout: 3600

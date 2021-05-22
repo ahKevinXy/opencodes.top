@@ -20,9 +20,14 @@ func MysqlSetup() *gorm.DB {
 		panic("服务器错误")
 	}
 	Eloquent = db
+
 	sqlDb, _ := db.DB()
+	//设置空闲连接池中连接的最大数
 	sqlDb.SetConnMaxLifetime(500)
+	//设置打开数据库连接的最大数量
 	sqlDb.SetMaxOpenConns(5000)
+
+	defer sqlDb.Close()
 	if Eloquent.Error != nil {
 		panic(Eloquent.Error)
 	}

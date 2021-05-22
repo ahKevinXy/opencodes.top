@@ -1,9 +1,11 @@
 package hash
 
-import "testing"
+import (
+	"testing"
+)
 
 const secret = "i1ydX9RtHyuJTrw7frcu"
-const length = 128
+const length = 256
 
 func TestHashidsEncode(t *testing.T) {
 	str, _ := New(secret, length).HashidsEncode([]int{99, 100})
